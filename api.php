@@ -1,9 +1,9 @@
-    <?php
+<?php
 
 function start(){
     $type = $_GET['type'];
     $answ = 'ERROR, illegal type of request';
-    
+
     switch($type){
         case 'order' : {
             $answ = order();
