@@ -1,6 +1,6 @@
 export default class ModelForm{
     products = [];
-    botUrl = 'https://script.google.com/macros/s/AKfycbwBQ17ypLfL1L1dw_QibRi1nU1Km8PAuJuzc7p_7BGLV8IaSNw/exec'
+    apiUrl = './api.php';
 
     setProductCart(products){
         this.products = products;
@@ -9,18 +9,21 @@ export default class ModelForm{
 
     sendOrder(userData){
         const { email, name, tel } = userData;
-        const products = this.products.map(({ title, price, count, id }) => {
-            return `\*id\*: ${ id }; \*title\*: ${ title }; \*price\*: ${ price }; \*count\*: ${ count }`;
-        }).join(`\n`);
-        console.log(products);
+        const products4Send = this.products.map(({ id, title, price, count }) => {
+            return {
+                id, 
+                title, 
+                price,
+                count
+            }
+        });
+
+        const products = JSON.stringify(products4Send);
 
         const email2 = email.replace(/\./g, '\\.');
         console.log(email2);
         
-        const url = `${ this.botUrl }?email=${ email2 }&name=${ name }&tel=${ tel }&products=${ products }`;
-        fetch(url, { mode : 'no-cors' });
-        //TODO: решить проблему с отправкой с гугл-апп скрипта
-        //TODO: доформатировать текст
+        const url = `${ this.apiUrl }?type=order&email=${ email2 }&name=${ name }&tel=${ tel }&products=${ products }`;
+        fetch(url);
     }
 }
-//https://script.google.com/macros/s/AKfycbzkX0efYKewlji6FH6HCZBW1g0oDIV5j20ATh8N/exec
