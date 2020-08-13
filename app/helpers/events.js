@@ -4,7 +4,8 @@ const events = {
     CHANGE_CATEGORY         : 'CHANGE_CATEGORY',
     GET_PRODUCTS_TO_CART    : 'GET_PRODUCTS_TO_CART',
     LOAD_CATEGORIES         : 'LOAD_CATEGORIES',
-    SET_PRODUCTS_TO_CART    : 'SET_PRODUCTS_TO_CART'
+    SET_PRODUCTS_TO_CART    : 'SET_PRODUCTS_TO_CART',
+    SEND_ORDER              : 'SEND_ORDER'
 };
 
 export default events;
