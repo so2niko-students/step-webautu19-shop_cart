@@ -13,6 +13,10 @@ function start(){
             $answ = products();
             break;
         }
+        case 'categories' : {
+            $answ = categories();
+            break;
+        }
     }
 
     echo $answ;
@@ -54,7 +58,15 @@ function sendToBot($email, $tel, $name, $products_body){
 }
 
 function products(){
-    $fileTextANSI = file_get_contents('./data/products_shop.csv');
+    return dataFromCSV('./data/products_shop.csv');
+}
+
+function categories(){
+    return dataFromCSV('./data/categories.csv');
+}
+
+function dataFromCSV($filename){
+    $fileTextANSI = file_get_contents($filename);
     
     $fileText = iconv('windows-1251', 'utf-8', $fileTextANSI);//Перекодировка для русского языка
     $linesArr = explode(";;;;;", $fileText);
@@ -79,6 +91,5 @@ function products(){
     $str = json_encode($productsResult);
     return $str;
 }
-
 
 start();
