@@ -1,5 +1,6 @@
 export default class ViewCategory{
     categoriesDOM = document.querySelector('.categories');
+    categoriesDescrDOM = document.querySelector('.category_description');
 
     constructor(handleClickCategory){
         this.categoriesDOM.addEventListener('click', handleClickCategory);
@@ -13,5 +14,7 @@ export default class ViewCategory{
         this.categoriesDOM.innerHTML = categoriesHTML;
     }
 
-
+    renderCatDescr(descr){
+        this.categoriesDescrDOM.innerText = descr;
+    }
 }
