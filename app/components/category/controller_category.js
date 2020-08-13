@@ -21,6 +21,8 @@ export default class ControllerCategory{
         const cat = ev.target.dataset.category;
         if(cat){
             this.publish(this.events.CHANGE_CATEGORY, cat);
+            const descr = this.model.getDescr(cat);
+            this.view.renderCatDescr(descr);
         }
     }
 
