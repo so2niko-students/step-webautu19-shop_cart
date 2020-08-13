@@ -4,7 +4,7 @@ import ViewForm from "./view_form.js";
 export default class ControllerForm{
     constructor({ subscribe, events }){
         this.model = new ModelForm();
-        this.view = new ViewForm(this.handleOrder);
+        this.view = new ViewForm(this.handleOrder, this.handleCloseModal);
 
         this.subscribe = subscribe;
 
@@ -19,6 +19,10 @@ export default class ControllerForm{
     handleOrder = (ev) => {
         const userData = this.view.getData(ev);
         this.model.sendOrder(userData);
+        this.view.closeModal();
+    }
+
+    handleCloseModal = () => {
         this.view.closeModal();
     }
 }

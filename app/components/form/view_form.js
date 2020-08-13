@@ -2,12 +2,16 @@ export default class ViewForm{
     modalWindow = document.querySelector('.modal');
     closeClass = 'close';
 
-    constructor(handleOrder){
+    constructor(handleOrder, handleClose){
         this.handleOrder = handleOrder;
+        this.handleClose = handleClose;
     }
 
     renderForm(){
         this.modalWindow.innerHTML = `<div class="modal_cart">
+            <div class="cart_buttons">
+                <button class="btn_modal_close">X</button>
+            </div>
             <form action="#">
                 <p>
                     <input type="text" placeholder="your name" autofocus name="name">
@@ -23,7 +27,9 @@ export default class ViewForm{
         </div>`;
 
         this.modalWindow.classList.remove(this.closeClass);
+
         this.modalWindow.querySelector('form').addEventListener('submit', this.handleOrder);
+        this.modalWindow.querySelector('.btn_modal_close').addEventListener('click', this.handleClose);
     }
 
     getData(ev){
