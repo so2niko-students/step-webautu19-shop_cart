@@ -12,6 +12,7 @@ export default class ControllerCart{
         this.events = events;
         this.subscribe(events.ADD_TO_CART, this.handleAddToCart);
         this.subscribe(events.SET_PRODUCTS_TO_CART, this.handleGetProducts);
+        this.subscribe(events.SEND_ORDER, this.handleClearCart);
 
         this.updateCartCount();
     }
