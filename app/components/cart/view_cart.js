@@ -22,9 +22,11 @@ export default class ViewCart{
         <div class="cart_buttons">
             <button class="btn_modal_close">X</button>
         </div>
-        <table>
-            ${ trs }
-        </table>
+        <div class="table_wrapper">
+            <table>
+                ${ trs }
+            </table>
+        </div>
         <div class="sum">SUM: <span class="modal_cart_sum">${ price }</span></div>
         <div class="cart_buttons">
             <button class="btn_modal_clear">Clear</button>

@@ -66,6 +66,11 @@ body{
     align-items: center;
 }
 
+.modal .table_wrapper{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
 .modal table{
     border-collapse: collapse;
 }
