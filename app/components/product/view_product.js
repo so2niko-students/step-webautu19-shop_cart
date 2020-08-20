@@ -11,13 +11,13 @@ export default class ViewProduct{
     }
 
     formatProduct(prod){
-        const { id, photo, title, price, description } = prod;
+        const { id, photo, title, price_view, description } = prod;
         return `
             <div class="card_product">
                 <div>
                     <img src="${ photo }" alt="${ title }">
                 </div>
-                <h3>${ price } UAH ${ title }</h3>
+                <h3>${ price_view } UAH ${ title }</h3>
                 <p>${ description }</p>
                 <div>
                     <button data-product-id="${ id }">to cart</button>
