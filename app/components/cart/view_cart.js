@@ -48,11 +48,11 @@ export default class ViewCart{
     }
 
     renderProduct(prod, pid){
-        const { title, price, count, id } = prod;
+        const { title, price_view, count, id } = prod;
         return `<tr>
         <td>${ pid + 1 }</td>
         <td>${ title }</td>
-        <td>${ price }</td>
+        <td>${ price_view }</td>
         <td><input type="number" min="0" class="inp_product_cart" value="${ count || 1 }" data-id="${ id }"></td>
     </tr>`
     }

@@ -58,11 +58,48 @@ function sendToBot($email, $tel, $name, $products_body){
 }
 
 function products(){
-    return dataFromCSV('./data/products_shop.csv');
+    // return dataFromCSV('./data/products_shop.csv');
+    return dataFromTSV('./data/stuff.tsv');
 }
 
 function categories(){
-    return dataFromCSV('./data/categories.csv', false);
+    // return dataFromCSV('./data/categories.csv', false);
+    return dataFromTSV('./data/stuff_categories.tsv');
+}
+
+
+function dataFromTSV($filename){
+    $fileText = file_get_contents($filename);
+    $linesArr = explode("\n", $fileText);
+    $names = explode("\t", array_shift($linesArr));
+
+    foreach($names as $i => $el){
+        $names[$i] = trim($names[$i]);
+    }
+
+    $productsResult = [];
+
+    foreach($linesArr as $line){
+        $prodLine = explode("\t", $line);//разбиение строки делителем на массив
+        
+        $product = [];
+    
+        foreach($prodLine as $i => $el){
+            $product[$names[$i]] = trim($el);
+        }
+
+        if(isset($product['price'])){
+            $pr = $product['price'];
+            $product['price_view'] = $pr;
+            $pr2 = str_replace(" ", "", $pr);
+            $product['price'] = str_replace(",", ".", $pr2);
+        }
+
+        array_push($productsResult, $product);
+    }
+
+    $str = json_encode($productsResult);
+    return $str;
 }
 
 function dataFromCSV($filename, $isWind1251 = true){
