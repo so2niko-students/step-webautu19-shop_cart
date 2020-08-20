@@ -1,5 +1,6 @@
 export default class ModelProduct{
     url = './api.php?type=products';
+    allProducts = {};
 
     constructor(){
         console.log('ModelProduct', this);
@@ -15,7 +16,8 @@ export default class ModelProduct{
     }
 
     formatData({ data, length, page, size }){
-        this.products = data;
+        this.updateAllProducts(data);
+        this.products = data;//узкое место
         this.pagination = {
             length,
             page,
@@ -38,8 +40,11 @@ export default class ModelProduct{
         return this.categories;
     }
 
-    getProductsByIds(ids){
-        return this.products.filter(product => ids.includes(product.id));
+    getProductsByIds(ids){//send data to cart
+        return ids.reduce((acc, id) => {
+            acc.push(this.allProducts[id]);
+            return acc;
+        }, []);
     }
 
     getProductsByCategory(category){
@@ -48,6 +53,14 @@ export default class ModelProduct{
         }
 
         return this.products.filter(product => product.category === category);
+    }
+
+    updateAllProducts(data){
+        data.forEach(prod => {
+            if(!this.allProducts[prod.id]){
+                this.allProducts[prod.id] = prod;
+            }
+        });
     }
 
 }
