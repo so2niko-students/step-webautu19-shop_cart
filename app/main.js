@@ -4,9 +4,11 @@ import ControllerCart from './components/cart/controller_cart.js';
 import ControllerForm from './components/form/controller_form.js';
 import ControllerCategory from './components/category/controller_category.js';
 import ControllerNotification from './components/notification/controller_notification.js';
+import ControllerPagination from './components/pagination/controller_pagination.js';
 
 const publisher = new Publisher();
 console.log(publisher);
+const pagination = new ControllerPagination(publisher.methods);
 const products = new ControllerProduct(publisher.methods);
 const cart = new ControllerCart(publisher.methods);
 const form = new ControllerForm(publisher.methods);

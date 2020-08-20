@@ -1,22 +1,27 @@
 export default class ModelProduct{
-    url = './api.php?type=products&page=4&size=10';
+    url = './api.php?type=products';
 
     constructor(){
         console.log('ModelProduct', this);
     }
 
-    async loadProducts(){
-        const req = await fetch(this.url);
+    async loadProducts(page = 0, size = 9){
+        const url = `${ this.url }&page=${ page }&size=${ size }`;
+        const req = await fetch(url);
         const resp = await req.json();
         this.formatData(resp);
 
         return this.products;
     }
 
-    formatData(resData){
-        this.products = resData.data;
-        this.productsLength = resData.length;
-        
+    formatData({ data, length, page, size }){
+        this.products = data;
+        this.pagination = {
+            length,
+            page,
+            size
+        };
+
         console.log(this.products);
 
         this.searchCategories(this.products);
@@ -41,6 +46,7 @@ export default class ModelProduct{
         if(category === 'all'){
             return this.products;
         }
+
         return this.products.filter(product => product.category === category);
     }
 
