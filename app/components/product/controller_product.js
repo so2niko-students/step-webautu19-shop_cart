@@ -12,14 +12,22 @@ export default class ControllerProduct{
 
         this.subscribe(events.GET_PRODUCTS_TO_CART, this.handleGetProducts);
         this.subscribe(events.CHANGE_CATEGORY, this.handleChangeCategory);
+        this.subscribe(events.CHOOSE_PAGINATION, this.handlePagination);
 
         this.loadProducts();        
     }
 
-    async loadProducts(){
-        const products = await this.model.loadProducts();
+    handlePagination = page => {
+        this.loadProducts(page);
+    }
+
+    async loadProducts(page = 0){
+        const products = await this.model.loadProducts(page);
         this.view.render(products);
 
+        this.publish(this.events.LOAD_PRODUCTS, this.model.pagination);
+
+        //TODO: refactor and fix
         const categories = this.model.searchCategories();
         this.publish(this.events.LOAD_CATEGORIES, categories);
     }

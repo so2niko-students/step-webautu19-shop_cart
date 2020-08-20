@@ -1,0 +1,23 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.pagination .pagination_link{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination .pagination_link:hover{
+    background-color: #121212;
+    color: wheat;
+}
+
+.pagination .pagination_link-active{
+    cursor: auto;
+    background-color: #c0c0c0;
+}
