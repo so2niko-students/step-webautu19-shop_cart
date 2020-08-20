@@ -10,7 +10,9 @@ function start(){
             break;
         }
         case 'products' : {
-            $answ = products();
+            $page = $_GET['page'];
+            $size = 1 * $_GET['size'];
+            $answ = products($page, $size);
             break;
         }
         case 'categories' : {
@@ -57,14 +59,23 @@ function sendToBot($email, $tel, $name, $products_body){
     fopen($url, 'r');
 }
 
-function products(){
-    // return dataFromCSV('./data/products_shop.csv');
-    return dataFromTSV('./data/stuff.tsv');
+function products($page, $size){
+    $data = dataFromTSV('./data/stuff.tsv');
+
+    $dataPagin = array_slice($data, $page * $size, $size);
+
+    $answ = [
+        "page" => $page,
+        "size" => $size,
+        "length" => count($data),
+        "data" => $dataPagin
+    ];
+    
+    return json_encode($answ);
 }
 
 function categories(){
-    // return dataFromCSV('./data/categories.csv', false);
-    return dataFromTSV('./data/stuff_categories.tsv');
+    return json_encode(dataFromTSV('./data/stuff_categories.tsv'));
 }
 
 
@@ -98,8 +109,7 @@ function dataFromTSV($filename){
         array_push($productsResult, $product);
     }
 
-    $str = json_encode($productsResult);
-    return $str;
+    return $productsResult;
 }
 
 function dataFromCSV($filename, $isWind1251 = true){

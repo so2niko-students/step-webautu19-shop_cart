@@ -1,5 +1,5 @@
 export default class ModelProduct{
-    url = './api.php?type=products';
+    url = './api.php?type=products&page=4&size=10';
 
     constructor(){
         console.log('ModelProduct', this);
@@ -13,8 +13,10 @@ export default class ModelProduct{
         return this.products;
     }
 
-    formatData(str){
-        this.products = str;
+    formatData(resData){
+        this.products = resData.data;
+        this.productsLength = resData.length;
+        
         console.log(this.products);
 
         this.searchCategories(this.products);
