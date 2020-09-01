@@ -78,13 +78,14 @@ function products($page, $size, $category = 'All'){
 }
 
 function filterByCategory($data, $category){
-    if($category == 'All'){
+    $category = strtolower($category);
+    if($category == 'all'){
         return $data;
     }
 
     $filtered = [];
     foreach($data as $product){
-        if($product['category'] == $category){
+        if(strtolower($product['category']) == $category){
             array_push($filtered, $product);
         }
     }

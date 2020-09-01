@@ -2,19 +2,16 @@ import ViewCategory from "./view_category.js";
 import ModelCategory from "./model_category.js";
 
 export default class ControllerCategory{
-    constructor({ publish, subscribe, events }){
-        this.model = new ModelCategory();
+    constructor({ publish,  events }){
+        this.model = new ModelCategory(this.handleLoadCategories);
         this.view = new ViewCategory(this.handleClickCategory);
 
         this.publish = publish;
-        this.subscribe = subscribe;
         this.events = events;
-
-        this.subscribe(events.LOAD_CATEGORIES, this.handleLoadCategories);
     }
 
     handleLoadCategories = categories => {
-        this.view.renderCategories([...categories]);
+        this.view.renderCategories(categories);
     }
 
     handleClickCategory = ev => {

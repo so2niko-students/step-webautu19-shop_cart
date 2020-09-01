@@ -7,6 +7,7 @@ export default class ViewPagination{
     }
 
     renderPagination({ length, size, page }){
+        console.log('Pagination: ', length, size, page);
         const pages = Math.ceil(length / size);
         const activeClass = 'pagination_link-active';
 

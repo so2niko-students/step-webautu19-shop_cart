@@ -26,10 +26,6 @@ export default class ControllerProduct{
         this.view.render(products);
 
         this.publish(this.events.LOAD_PRODUCTS, this.model.pagination);
-
-        //TODO: refactor and fix
-        const categories = this.model.searchCategories();
-        this.publish(this.events.LOAD_CATEGORIES, categories);
     }
 
     handleClickBuyProduct = ev => {
@@ -45,8 +41,7 @@ export default class ControllerProduct{
     }
 
     handleChangeCategory = cat => {
-        const products = this.model.getProductsByCategory(cat);
-
-        this.view.render(products);       
+        this.model.setCategory(cat);
+        this.loadProducts();        
     }
 }

@@ -3,7 +3,6 @@ const events = {
     BUY                     : 'BUY',
     CHANGE_CATEGORY         : 'CHANGE_CATEGORY',
     GET_PRODUCTS_TO_CART    : 'GET_PRODUCTS_TO_CART',
-    LOAD_CATEGORIES         : 'LOAD_CATEGORIES',
     LOAD_PRODUCTS           : 'LOAD_PRODUCTS',
     SET_PRODUCTS_TO_CART    : 'SET_PRODUCTS_TO_CART',
     SEND_ORDER              : 'SEND_ORDER',

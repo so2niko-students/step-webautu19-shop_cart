@@ -1,13 +1,14 @@
 export default class ModelProduct{
     url = './api.php?type=products';
     allProducts = {};
+    category = 'All';
 
     constructor(){
         console.log('ModelProduct', this);
     }
 
     async loadProducts(page = 0, size = 9){
-        const url = `${ this.url }&page=${ page }&size=${ size }`;
+        const url = `${ this.url }&page=${ page }&size=${ size }&category=${ this.category }`;
         const req = await fetch(url);
         const resp = await req.json();
         this.formatData(resp);
@@ -24,20 +25,7 @@ export default class ModelProduct{
             size
         };
 
-        console.log(this.products);
-
-        this.searchCategories(this.products);
-
         localStorage.setItem('products', JSON.stringify(this.products));
-    }
-
-    searchCategories(){
-        this.categories = new Set();
-        this.products.forEach(prod => {
-            this.categories.add(prod.category);
-        });
-
-        return this.categories;
     }
 
     getProductsByIds(ids){//send data to cart
@@ -47,12 +35,8 @@ export default class ModelProduct{
         }, []);
     }
 
-    getProductsByCategory(category){
-        if(category === 'all'){
-            return this.products;
-        }
-
-        return this.products.filter(product => product.category === category);
+    setCategory(category){
+        this.category = category;
     }
 
     updateAllProducts(data){
