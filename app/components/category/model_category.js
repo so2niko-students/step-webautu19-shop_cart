@@ -1,7 +1,9 @@
 export default class ModelCategory{
     url = './api.php?type=categories';
 
-    constructor(){
+    constructor(handleLoadCategories){
+        this.handleLoadCategories = handleLoadCategories;
+
         this.loadCategoriesList();
     }
 
@@ -13,7 +15,11 @@ export default class ModelCategory{
             return acc;
         }, {});
 
+        this.categories = Object.keys(this.catList);
+
         this.catList.all = '';
+
+        this.handleLoadCategories(this.categories);
     }
 
     getDescr(cat){
