@@ -12,7 +12,8 @@ function start(){
         case 'products' : {
             $page = $_GET['page'];
             $size = 1 * $_GET['size'];
-            $answ = products($page, $size);
+            $category = $_GET['category'];
+            $answ = products($page, $size, $category);
             break;
         }
         case 'categories' : {
@@ -59,19 +60,36 @@ function sendToBot($email, $tel, $name, $products_body){
     fopen($url, 'r');
 }
 
-function products($page, $size){
+function products($page, $size, $category = 'All'){
     $data = dataFromTSV('./data/stuff.tsv');
 
-    $dataPagin = array_slice($data, $page * $size, $size);
+    $filteredData = filterByCategory($data, $category);
+
+    $dataPagin = array_slice($filteredData, $page * $size, $size);
 
     $answ = [
         "page" => $page,
         "size" => $size,
-        "length" => count($data),
+        "length" => count($filteredData),
         "data" => $dataPagin
     ];
     
     return json_encode($answ);
+}
+
+function filterByCategory($data, $category){
+    if($category == 'All'){
+        return $data;
+    }
+
+    $filtered = [];
+    foreach($data as $product){
+        if($product['category'] == $category){
+            array_push($filtered, $product);
+        }
+    }
+
+    return $filtered;
 }
 
 function categories(){
