@@ -11,7 +11,8 @@ export default class ViewProduct{
     }
 
     formatProduct(prod){
-        const { id, photo, title, price_view, description } = prod;
+        const { id, photo, title, price_view, description, availability } = prod;
+
         return `
             <div class="card_product">
                 <div>
@@ -20,7 +21,7 @@ export default class ViewProduct{
                 <h3>${ price_view } UAH ${ title }</h3>
                 <p>${ description }</p>
                 <div>
-                    <button data-product-id="${ id }">to cart</button>
+                    ${ availability == 'В наличии' ? `<button data-product-id="${ id }">to cart</button>` : 'Отсутствует на складе'}
                 </div>
             </div>
         `;

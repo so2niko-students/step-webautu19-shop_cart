@@ -1,0 +1,48 @@
+id	title	description	price	photo	category
+3001	MSI GeForce GT710, 1Gb 	MSI	1 150,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vc3001.jpg	Видеокарта
+3002	Gigabyte GeForce GT710, 2Gb	Gigabyte	1 500,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vc3002.jpg	Видеокарта
+3003	MSI GeForce GT1030 Aero ITX, 2Gb	MSI	2 300,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vc3003.jpg	Видеокарта
+3004	Asus GeForce GT1030, 2Gb	Asus	2 400,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vc3004.jpg	Видеокарта
+3005	MSI Radeon RX 550 Aero ITX, 2Gb	MSI	3 000,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vc3005.jpg	Видеокарта
+3006	MSI Radeon RX 570 Armor OC	MSI	4 400,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vc3006.jpg	Видеокарта
+3007	Asus GeForce GTX 1650 Strix Advanced Edition	Asus	5 200,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vc3007.jpg	Видеокарта
+3008	Gigabyte GeForce GTX 1060 3GB GDDR5 192-bit Mini ITX	Gigabyte	6 100,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vc3008.jpg	Видеокарта
+3009	Palit GeForce GTX 1660 Dual OC, 6Gb	Palit	7 400,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vo3009.jpg	Видеокарта
+3010	Asus GeForce GTX 1660 6GB GDDR5 192-bit TUF Gaming X3 OC	Asus	8 100,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vc3010.jpg	Видеокарта
+3011	MSI GeForce RTX 2060 6GB GDDR6 192-bit Gaming	MSI	12 100,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vc3011.jpg	Видеокарта
+3012	Palit GeForce RTX 2080 8GB GDDR6 256-bit Super JetStream	Palit	21 000,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/vc/vc3012.jpg	Видеокарта
+1001	ASRock FM2A68M-DG3+	ASRock	1 100,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1001.jpg	Материнская плата
+1002	MSI A68HM-E33 V2 	MSI	1 150,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1002.jpg	Материнская плата
+1003	Gigabyte GA-F2A68HM-S1	Gigabyte	1 200,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1003.jpg	Материнская плата
+1004	Gigabyte GA-E2500N	Gigabyte	1 250,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1004.jpg	Материнская плата
+1005	Asus M5A78L-M LX3	Asus	1 300,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1005.jpg	Материнская плата
+1006	ASRock H110M-DGS R3.0	ASRock	1 350,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1006.jpg	Материнская плата
+1007	Gigabyte GA-A320M-H	Gigabyte	1 400,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1007.jpg	Материнская плата
+1008	Asus H110M-K	Asus	1 500,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1008.jpg	Материнская плата
+1009	MSI B450M-A Pro Max	MSI	2 000,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1009.jpg	Материнская плата
+1010	Asus Prime A320M-A	Asus	2 100,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1010.jpg	Материнская плата
+1011	Gigabyte H310 D3 2.0	Gigabyte	2 150,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1011.jpg	Материнская плата
+1012	Gigabyte B365M D3H	Gigabyte	2 280,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/mab/mab1012.jpg	Материнская плата
+2001	Intel Celeron G1620 Box	Intel	1 000,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/pr/pr2001.jpg	Процессор
+2002	AMD A6-9500	AMD	1 100,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/pr/pr2002.jpg	Процессор
+2003	AMD Athlon 200GE	AMD	1 200,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/pr/pr2003.jpg	Процессор
+2004	AMD Ryzen 3 1200	AMD	1 800,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/pr/pr2004.jpg	Процессор
+2005	Intel Core i3-9100F	Intel	2 200,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/pr/pr2005.jpg	Процессор
+2006	Intel Core i3-7100 3.9GHz s1151	Intel	2 700,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/pr/pr2006.jpg	Процессор
+2007	AMD Ryzen 3 3200G, Box	AMD	2 750,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/pr/pr2007.jpg	Процессор
+2008	Intel Core i3 8100	Intel	3 200,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/pr/pr2008.jpg	Процессор
+2009	AMD Ryzen 5 2600	AMD	3 550,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/pr/pr2009.jpg	Процессор
+2010	AMD Ryzen 5 3400G, Box	AMD	4 050,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/pr/pr2010.jpg	Процессор
+2011	Intel Core i3 8350K	Intel	4 800,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/pr/pr2011.jpg	Процессор
+4001	Micron DDR2 800Mhz 2Gb	Micron	272,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4001.jpg	Оперативная память
+4002	Kingston ValueRAM DDR3 1600MHz 2GB	Kingston	330,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4002.jpg	Оперативная память
+4003	Apacer DDR3L 1600Mhz 4Gb	Apacer	500,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4003.jpg	Оперативная память
+4004	Kingston DDR4 2666Mhz 4Gb ValueRAM	Kingston	570,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4004.jpg	Оперативная память
+4005	Kingston ValueRAM DDR4 2666MHz 4GB	Kingston	680,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4005.jpg	Оперативная память
+4006	Kingston DDR3 1600Mhz 8Gb	Kingston	890,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4006.jpg	Оперативная память
+4007	Patriot DDR3 1600Mhz 4Gb	Patriot	920,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4007.jpg	Оперативная память
+4008	Patriot DDR4 2666Mhz 8Gb Viper Elite Grey	Patriot	930,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4008.jpg	Оперативная память
+4009	Team DDR4 2666Mhz 8Gb Vulcan Z Grey	Team	1 000,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4009.jpg	Оперативная память
+4010	Kingston ValueRAM DDR3 1600MHz 8GB	Kingston	1 100,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4010.jpg	Оперативная память
+4011	Kingston ValueRAM DDR4 2400MHz 16GB	Kingston	1 890,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4011.jpg	Оперативная память
+4012	Team DDR4 2666Mhz 16Gb Vulcan Z Grey	Team	1 900,00	https://raw.githubusercontent.com/AleksPika/lsacomp/master/img/ram/ram4012.jpg	Оперативная память
