@@ -6,8 +6,8 @@ export default class ModelProduct{
         console.log('ModelProduct', this);
     }
 
-    async loadProducts(page = 0, size = 9){
-        const url = `${ this.url }&page=${ page }&size=${ size }`;
+    async loadProducts(page = 0, size = 9, category = 'All'){
+        const url = `${ this.url }&page=${ page }&size=${ size }&category=${ category }`;
         const req = await fetch(url);
         const resp = await req.json();
         this.formatData(resp);
