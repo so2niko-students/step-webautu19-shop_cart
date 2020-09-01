@@ -25,10 +25,6 @@ export default class ModelProduct{
             size
         };
 
-        console.log(this.products);
-
-        this.searchCategories(this.products);
-
         localStorage.setItem('products', JSON.stringify(this.products));
     }
 
